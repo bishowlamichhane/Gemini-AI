@@ -114,14 +114,7 @@ const Main = () => {
           </div>
 
           <div className={styles.resultData}>
-<<<<<<< HEAD
             <img src={googleGeminiIcon} className={styles.headerLogo} />
-=======
-            <img
-              src={googleGeminiIcon}
-              className={styles.headerLogo}
-            />
->>>>>>> 6d6ed68a92792759f083980d72bfd669345c7da8
             {loading ? (
               <div className={styles.loader}>
                 <hr />
