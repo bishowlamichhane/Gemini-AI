@@ -7,7 +7,8 @@ import { TfiComment } from "react-icons/tfi";
 import { FaReact } from "react-icons/fa";
 import { IoSend } from "react-icons/io5";
 import { FaStopCircle } from "react-icons/fa";
-
+import googleGeminiIcon from "../../public/images/google-gemini-icon.svg";
+import profileImg from "../../public/images/bishow_prof.jpg";
 import { useContext, useEffect, useRef, useState } from "react";
 import { Context } from "../../context/context";
 import { Link } from "react-router-dom";
@@ -35,12 +36,12 @@ const Main = () => {
         <div className={styles.navHeading}>
           <p>Gemini</p>
           <img
-            src="./images/google-gemini-icon.svg"
+            src={googleGeminiIcon}
             className={styles.headerLogo}
           />
         </div>
         <div className={styles.navProfile}>
-          <img src="../images/bishow_prof.jpg" className={styles.profileImg} />
+          <img src={profileImg} className={styles.profileImg} />
         </div>
       </div>
 
@@ -110,7 +111,7 @@ const Main = () => {
 
           <div className={styles.resultData}>
             <img
-              src="/images/google-gemini-icon.svg"
+              src={googleGeminiIcon}
               className={styles.headerLogo}
             />
             {loading ? (
