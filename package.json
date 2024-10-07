@@ -2,7 +2,7 @@
   "name": "gemini-ai",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://bishowlamichhane.github.io/Gemini-AI/index.html",
+  "homepage": "https://bishowlamichhane.github.io/Gemini-AI",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
