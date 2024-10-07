@@ -35,7 +35,7 @@ const Main = () => {
         <div className={styles.navHeading}>
           <p>Gemini</p>
           <img
-            src="/images/google-gemini-icon.svg"
+            src="./images/google-gemini-icon.svg"
             className={styles.headerLogo}
           />
         </div>
