@@ -10,8 +10,8 @@ import { FaStopCircle } from "react-icons/fa";
 
 import { useContext, useEffect, useRef, useState } from "react";
 import { Context } from "../../context/context";
-import { Link } from "react-router-dom";
-
+import googleGeminiIcon from "../../public/images/google-gemini-icon.svg";
+import profileImg from "../../public/images/bishow_prof.jpg";
 const Main = () => {
   const {
     onSent,
@@ -34,13 +34,10 @@ const Main = () => {
       <div className={styles.navBar}>
         <div className={styles.navHeading}>
           <p>Gemini</p>
-          <img
-            src="/images/google-gemini-icon.svg"
-            className={styles.headerLogo}
-          />
+          <img src={googleGeminiIcon} className={styles.headerLogo} />
         </div>
         <div className={styles.navProfile}>
-          <img src="../images/bishow_prof.jpg" className={styles.profileImg} />
+          <img src={profileImg} className={styles.profileImg} />
         </div>
       </div>
 
@@ -109,10 +106,7 @@ const Main = () => {
           </div>
 
           <div className={styles.resultData}>
-            <img
-              src="/images/google-gemini-icon.svg"
-              className={styles.headerLogo}
-            />
+            <img src={googleGeminiIcon} className={styles.headerLogo} />
             {loading ? (
               <div className={styles.loader}>
                 <hr />
