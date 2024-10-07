@@ -6,13 +6,12 @@ import { GoLightBulb } from "react-icons/go";
 import { TfiComment } from "react-icons/tfi";
 import { FaReact } from "react-icons/fa";
 import { IoSend } from "react-icons/io5";
-import { FaStopCircle } from "react-icons/fa";
-import googleGeminiIcon from "../../public/images/google-gemini-icon.svg";
-import profileImg from "../../public/images/bishow_prof.jpg";
-import { useContext, useEffect, useRef, useState } from "react";
+
+import googleGeminiIcon from "/Gemini-AI/images/google-gemini-icon.svg";
+import profileImg from "/Gemini-AI/images/bishow_prof.jpg";
+import { useContext } from "react";
 import { Context } from "../../context/context";
-import googleGeminiIcon from "../../public/images/google-gemini-icon.svg";
-import profileImg from "../../public/images/bishow_prof.jpg";
+
 const Main = () => {
   const {
     onSent,
@@ -35,14 +34,7 @@ const Main = () => {
       <div className={styles.navBar}>
         <div className={styles.navHeading}>
           <p>Gemini</p>
-          <img
-<<<<<<< HEAD
-            src="/images/google-gemini-icon.svg"
-=======
-            src={googleGeminiIcon}
->>>>>>> 6d6ed68a92792759f083980d72bfd669345c7da8
-            className={styles.headerLogo}
-          />
+          <img src={googleGeminiIcon} className={styles.headerLogo} />
         </div>
         <div className={styles.navProfile}>
           <img src={profileImg} className={styles.profileImg} />
@@ -114,14 +106,7 @@ const Main = () => {
           </div>
 
           <div className={styles.resultData}>
-<<<<<<< HEAD
             <img src={googleGeminiIcon} className={styles.headerLogo} />
-=======
-            <img
-              src={googleGeminiIcon}
-              className={styles.headerLogo}
-            />
->>>>>>> 6d6ed68a92792759f083980d72bfd669345c7da8
             {loading ? (
               <div className={styles.loader}>
                 <hr />
