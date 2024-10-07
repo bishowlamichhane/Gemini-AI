@@ -7,8 +7,8 @@ import { TfiComment } from "react-icons/tfi";
 import { FaReact } from "react-icons/fa";
 import { IoSend } from "react-icons/io5";
 
-import googleGeminiIcon from "/Gemini-AI/images/google-gemini-icon.svg";
-import profileImg from "/Gemini-AI/images/bishow_prof.jpg";
+import googleGeminiIcon from "/images/google-gemini-icon.svg";
+import profileImg from "/images/bishow_prof.jpg";
 import { useContext } from "react";
 import { Context } from "../../context/context";
 
