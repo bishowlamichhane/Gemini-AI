@@ -11,6 +11,7 @@ const ContextProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [resultData, setresultData] = useState("");
   const timeouts = useRef([]);
+  const [theme, setTheme] = useState("light");
   const delayPara = (index, nextWord) => {
     const timeout = setTimeout(() => {
       setresultData((prev) => prev + nextWord);
@@ -23,6 +24,9 @@ const ContextProvider = ({ children }) => {
     timeouts.current = [];
   };
 
+  const toggleTheme = () => {
+    return theme === "dark" ? setTheme("light") : setTheme("dark");
+  };
   const newChat = () => {
     setLoading(false);
     setshowResult(false);
@@ -76,6 +80,9 @@ const ContextProvider = ({ children }) => {
     input,
     setInput,
     newChat,
+    toggleTheme,
+    theme,
+    setTheme,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;

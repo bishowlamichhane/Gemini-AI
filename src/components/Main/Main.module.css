@@ -1,9 +1,15 @@
+
+
+
+
+
 .mainWrapper{
     display: flex;
     flex-direction: column;
     justify-content:space-between;
    flex: 1;
    position: relative;
+
 }
 
 .navBar{
@@ -34,6 +40,36 @@
 .headerLogo{
     width: 20px;
     height: 20px;
+}
+
+
+.toggleButton{
+    width: 50px;
+    height: 25px;
+    background-color: skyblue;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggleButton .toggleBtnOff{
+    height: 100%;
+    width: 55%;
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.toggleButton .toggleBtnOn{
+    height: 100%;
+    width: 55%;
+    position: absolute;
+    right:0 ;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
 }
 .profileImg{
 

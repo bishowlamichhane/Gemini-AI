@@ -10,7 +10,8 @@ import { IoSend } from "react-icons/io5";
 import googleGeminiIcon from "../../assets/images/google-gemini-icon.svg";
 import profileImg from "../../assets/images/bishow_prof.jpg";
 import { useContext } from "react";
-import { Context } from "../../context/context";
+import { Context } from "../../context/Context";
+import { BsBack } from "react-icons/bs";
 
 const Main = () => {
   const {
@@ -22,6 +23,8 @@ const Main = () => {
     resultData,
     input,
     setInput,
+    toggleTheme,
+    theme,
   } = useContext(Context);
 
   const handleClick = async (text) => {
@@ -29,12 +32,32 @@ const Main = () => {
     await onSent(text);
   };
 
+  const handleTheme = () => {
+    toggleTheme();
+  };
+
   return (
-    <main className={styles.mainWrapper}>
+    <main
+      className={styles.mainWrapper}
+      style={{
+        backgroundColor: `${theme === "dark" ? "black" : "white"}`,
+      }}
+    >
       <div className={styles.navBar}>
         <div className={styles.navHeading}>
-          <p>Gemini</p>
+          <p style={{ color: `${theme === "dark" ? "white" : "#585858"}` }}>
+            Gemini
+          </p>
           <img src={googleGeminiIcon} className={styles.headerLogo} />
+        </div>
+        <div className={styles.toggleButton} onClick={handleTheme}>
+          <button
+            className={`${
+              theme === "dark"
+                ? `${styles.toggleBtnOn}`
+                : `${styles.toggleBtnOff}`
+            }`}
+          ></button>
         </div>
         <div className={styles.navProfile}>
           <img src={profileImg} className={styles.profileImg} />

@@ -12,7 +12,7 @@ import { Context } from "../../context/context";
 const Sidebar = ({ isOpen, setisOpen }) => {
   const handleClick = () => setisOpen(!isOpen);
 
-  const { onSent, delayPara, prevPrompt, setrecentPrompt, newChat } =
+  const { onSent, delayPara, prevPrompt, setrecentPrompt, newChat, theme } =
     useContext(Context);
 
   const loadPrompt = async (prompt) => {
@@ -25,10 +25,21 @@ const Sidebar = ({ isOpen, setisOpen }) => {
       className={`${styles.sidebarWrapper} ${
         isOpen ? styles.sidebarOpen : styles.sidebarClose
       }`}
+      style={{
+        backgroundColor: `${theme === "dark" ? "rgb(66,66,66)" : "#f0f4f9"}`,
+
+        color: `${theme === "dark" ? "#f0f4f9" : "rgb(66,66,66)"}`,
+      }}
     >
       <div className={styles.upperSidebar}>
         <div className={styles.menuIconSection}>
-          <RxHamburgerMenu onClick={handleClick} className={styles.menuIcon} />
+          <RxHamburgerMenu
+            onClick={handleClick}
+            className={styles.menuIcon}
+            style={{
+              color: `${theme === "dark" ? "#f0f4f9" : "rgb(66,66,66)"}`,
+            }}
+          />
         </div>
         <div className={styles.newChatWrapper} onClick={() => newChat()}>
           <FiPlus className={styles.newChatIcon} />
